@@ -29,6 +29,11 @@ app.get("/dashboard",(req,res)=>{
     res.render("dashboard");
 })
 
+app.get("/mycon",(req,res)=>{
+    res.render("mycon");
+})
+
+
 app.listen(port,()=>{
     console.log(`listening to port : ${port}`)
 })

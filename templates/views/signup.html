@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./signup.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <form id="category-form">
+            <label for="category">Select your category:</label>
+            <select id="category" name="category">
+                <option value="job-seeker">Job Seeker</option>
+                <option value="medical-startup">Medical Startup</option>
+                <option value="investor">Investor</option>
+            </select>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script>
+        const categoryForm = document.getElementById('category-form');
+
+        categoryForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const category = document.getElementById('category').value;
+            if (category === 'job-seeker') {
+                window.location.href = 'job-seeker-sign-up.html';
+            } else if (category === 'medical-startup') {
+                window.location.href = 'medical-startup-sign-up.html';
+            } else if (category === 'investor') {
+                window.location.href = 'investor-sign-up.html';
+            }
+        });
+
+    </script>
+</body>
+
+</html>
