@@ -40,10 +40,9 @@
           </div>
       </ul>
     </section>
-    <!-- Add more connection groups as needed -->
+
   </main>
 
-  <!-- Connection Details Modal -->
   <div class="modal fade" id="connectionModal" tabindex="-1" role="dialog" aria-labelledby="connectionModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
@@ -54,7 +53,6 @@
           </button>
         </div>
         <div class="modal-body">
-          <!-- Connection details will be loaded here -->
           <p id="connection-details"></p>
         </div>
         <div class="modal-footer">
@@ -68,7 +66,6 @@
 <script>
 
 document.addEventListener('DOMContentLoaded', function () {
-  // Sample connection data
   const connectionData = {
     1: {
       id: 1,
@@ -107,10 +104,8 @@ document.addEventListener('DOMContentLoaded', function () {
 },
   };
 
-  // Get all connection items
   const connectionItems = document.querySelectorAll('.connection-item');
 
-  // Add click event listener to each connection item
   connectionItems.forEach((item) => {
     item.addEventListener('click', () => {
       // Get the connection ID from the data-connection-id attribute
@@ -137,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', (e) => {
       e.preventDefault();
 
-      // Get the target tab ID
+      // target tab ID
       const tabId = e.target.getAttribute('href').slice(1);
 
       // Remove active class from all tabs
