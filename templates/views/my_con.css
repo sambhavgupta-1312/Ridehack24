@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  header h1 {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  
+  nav {
+    background-color: #444;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  nav ul li a:hover {
+    background-color: #555;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  
+  .connection-group {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .connection-group h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+  }
+  
+  .connection-group h2::before {
+    content: '';
+    background-color: #333;
+    width: 2rem;
+    height: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .connection-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .connection-item {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .connection-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+  
+  .connection-name {
+    font-weight: bold;
+  }
+  
+  .connection-date {
+    color: #666;
+    font-size: 0.8rem;
+  }
+  
+  .column-separator {
+    width: 1px;
+    background-color: #ddd;
+    height: 100%;
+    margin: 0 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    main {
+      flex-wrap: nowrap;
+    }
+  
+    .connection-group {
+      flex: 1 0 33.333%;
+    }
+  
+    .column-separator {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .connection-group {
+      flex: 1 0 25%;
+    }
+  }

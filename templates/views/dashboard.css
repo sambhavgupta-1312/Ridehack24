@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+    body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    }
+    
+    .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    }
+    
+    header {
+    background-color: #333;
+    padding: 1rem;
+    }
+    
+    header h1 {
+    color: #fff;
+    font-size: 1.5rem;
+    }
+    
+    nav {
+    background-color: #444;
+    padding: 1rem;
+    }
+    
+    nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    }
+    
+    nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    }
+    
+    nav ul li a:hover {
+    background-color: #555;
+    }
+    
+    main {
+    display: flex;
+    padding: 1rem;
+    }
+    
+    .dashboard-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    margin-right: 1rem;
+    flex: 1;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dashboard-content h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+    }
+    
+    .dashboard-content ul {
+    list-style-type: none;
+    }
+    
+    .dashboard-content ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    }
+    
+    .username {
+    flex: 1;
+    font-weight: bold;
+    }
+    
+    .action {
+    flex: 3;
+    }
+    
+    .date {
+    flex: 1;
+    color: #666;
+    }
+    
+    .investment {
+    flex: 2;
+    color: #666;
+    }
+    
+    .net-worth {
+    flex: 3;
+    color: #666;
+    }
+    
+    .username, .action, .date, .investment, .net-worth {
+    padding: 0.2rem 0.5rem;
+    }
+    
+    .username, .action {
+    border-right: 1px solid #ddd;
+    }

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="my_con.css">
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>My Connections</h1>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#startups">Startups</a></li>
+      <li><a href="#investors">Investors</a></li>
+      <li><a href="#individuals">Individuals</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="startups" class="connection-group">
+      <h2>Startups (10)</h2>
+      <ul class="connection-list">
+        <li class="connection-item" data-connection-id="1">
+          <div class="connection-details">
+            <span class="connection-name" data-toggle="modal" data-target="#connectionModal" data-connection-id="1">Startup A</span>
+            <span class="connection-date">Joined on: Jan 1, 2023</span>
+          </div>
+        </li>
+        <li class="connection-item" data-connection-id="2">
+          <div class="connection-details">
+            <span class="connection-name" data-toggle="modal" data-target="#connectionModal" data-connection-id="2">Startup B</span>
+            <span class="connection-date">Joined on: Feb 10, 2023</span>
+          </div>
+        </li>
+        <div class="connection-item" data-connection-id="3">
+            <div class="connection-name">Startup C</div>
+            <div class="connection-date">Mar 15, 2023</div>
+            <div class="connection-description">Startup C is a creative agency specializing in graphic design and branding.</div>
+          </div>
+      </ul>
+    </section>
+    <!-- Add more connection groups as needed -->
+  </main>
+
+  <!-- Connection Details Modal -->
+  <div class="modal fade" id="connectionModal" tabindex="-1" role="dialog" aria-labelledby="connectionModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="connectionModalLabel">Connection Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Connection details will be loaded here -->
+          <p id="connection-details"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  // Sample connection data
+  const connectionData = {
+    1: {
+      id: 1,
+      name: 'Startup A',
+      contact: 'contact@startupa.com',
+      connectionDate: 'Jan 1, 2023',
+      description: 'Startup A is a tech company focusing on AI and machine learning.',
+    },
+    2: {
+      id: 2,
+      name: 'Startup B',
+      contact: 'contact@startupb.com',
+      connectionDate: 'Feb 10, 2023',
+      description: 'Startup B is a software development agency specializing in web and mobile apps.',
+    },
+    3: {
+  id: 3,
+  name: 'Startup C',
+  contact: 'contact@startupc.com',
+  connectionDate: 'Mar 15, 2023',
+  description: 'Startup C is a creative agency specializing in graphic design and branding.',
+},
+    4: {
+  id: 4,
+  name: 'Investor A',
+  contact: 'contact@investora.com',
+  connectionDate: 'Apr 20, 2023',
+  description: 'Investor A is a venture capital firm focused on early-stage technology companies.',
+},
+5: {
+  id: 5,
+  name: 'Individual B',
+  contact: 'contact@individualb.com',
+  connectionDate: 'May 5, 2023',
+  description: 'Individual B is a serial entrepreneur with experience in e-commerce and fintech.',
+},
+  };
+
+  // Get all connection items
+  const connectionItems = document.querySelectorAll('.connection-item');
+
+  // Add click event listener to each connection item
+  connectionItems.forEach((item) => {
+    item.addEventListener('click', () => {
+      // Get the connection ID from the data-connection-id attribute
+      const connectionId = item.dataset.connectionId;
+
+      // Get the connection details from the connectionData object
+      const connectionDetails = connectionData[connectionId];
+
+      // Display the connection details in the modal
+      document.getElementById('connection-details').innerHTML = `
+        <strong>Name:</strong> ${connectionDetails.name}<br>
+        <strong>Contact:</strong> ${connectionDetails.contact}<br>
+        <strong>Connection Date:</strong> ${connectionDetails.connectionDate}<br>
+        <strong>Description:</strong> ${connectionDetails.description}<br>
+      `;
+    });
+  });
+
+  // Get all tab links
+  const tabLinks = document.querySelectorAll('nav ul li a');
+
+  // Add click event listener to each tab link
+  tabLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      // Get the target tab ID
+      const tabId = e.target.getAttribute('href').slice(1);
+
+      // Remove active class from all tabs
+      document.querySelectorAll('.connection-group').forEach((tab) => {
+        tab.classList.remove('active');
+      });
+
+      // Add active class to the target tab
+      document.getElementById(tabId).classList.add('active');
+
+      // Hide all tab contents
+      document.querySelectorAll('.connection-group').forEach((content) => {
+        content.style.display = 'none';
+      });
+
+      // Show the target tab content
+      document.getElementById(tabId).style.display = 'block';
+    });
+  });
+
+  // Activate the first tab by default
+  document.querySelector('nav ul li a').click();
+});
+</script>
+</body>
+</html>
