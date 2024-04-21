@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up - Medical Startup</title>
+    <link rel="stylesheet" type="text/css" href="sign_startup.css">
+</head>
+<body>
+    <form id="job" class="container" action="/sign_in">
+        <h2 class="signup-heading bg-light-grey">Sign Up - Medical Startup</h2>
+        <div class="section">
+            <h3 class="section-heading bg-light-grey">Startup Information:</h3>
+            <br>
+            <div class="section-content">
+                <div class="form-group">
+                    <label for="company-name">Company Name:</label>
+                    <input type="text" id="company-name" name="company-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="business-registration-number">Business Registration Number:</label>
+                    <input type="text" id="business-registration-number" name="business-registration-number" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="legal-structure">Legal Structure:</label>
+                    <select id="legal-structure" name="legal-structure" class="form-control" required>
+                        <option value="LLC">LLC</option>
+                        <option value="Corporation">Corporation</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="industry-type">Industry Type:</label>
+                    <select id="industry-type" name="industry-type" class="form-control" required>
+                        <option value="Medical">Medical</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Equipment">Equipment</option>
+                        <option value="Treatment">Treatment</option>
+                        <!-- Add more options as needed -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="company-website">Company Website (if any):</label>
+                    <input type="url" id="company-website" name="company-website" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="business-email">Business Email Address:</label>
+                    <input type="email" id="business-email" name="business-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-number">Phone Number:</label>
+                    <input type="tel" id="phone-number" name="phone-number" class="form-control" required>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3 class="section-heading bg-light-grey">Primary Contact Information:</h3>
+            <br>
+            <div class="section-content">
+                <div class="form-group">
+                    <label for="full-name">Full Name of Primary Contact Person:</label>
+                    <input type="text" id="full-name" name="full-name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email Address:</label>
+                    <input type="email" id="contact-email" name="contact-email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone-number">Phone Number:</label>
+                    <input type="tel" id="contact-phone-number" name="contact-phone-number" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="department">Department (if applicable):</label>
+                    <input type="text" id="department" name="department" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3 class="section-heading bg-light-grey">Address:</h3>
+            <br>
+            <div class="section-content">
+                <div class="form-group">
+                    <label for="company-address">Company Address (Headquarters or Registered Office):</label>
+                    <input type="text" id="company-address" name="company-address" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="state-province">State/Province:</label>
+                    <input type="text" id="state-province" name="state-province" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip-postal-code">Zip/Postal Code:</label>
+                    <input type="text" id="zip-postal-code" name="zip-postal-code" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <input type="text" id="country" name="country" class="form-control" required>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3 class="section-heading bg-light-grey">Security Information:</h3>
+            <br>
+            <div class="section-content">
+                <div class="form-group">
+                    <label for="password">Password for Account Access:</label>
+                    <input type="password" id="password" name="password" class="form-control" required>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <h3 class="section-heading bg-light-grey">Additional Information:</h3>
+            <br>
+            <div class="section-content">
+                <div class="form-group">
+                    <label for="specific-requirements">Any specific requirements or questions:</label>
+                    <textarea id="specific-requirements" name="specific-requirements" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="submit-btn">Sign Up</button>
+    </form>
+</body>
+</html>

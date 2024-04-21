@@ -33,6 +33,21 @@ app.get("/mycon",(req,res)=>{
     res.render("mycon");
 })
 
+app.get("/signup",(req,res)=>{
+    res.render("signup");
+})
+
+app.get("/sign_investor",(req,res)=>{
+    res.render("sign_investor");
+})
+
+app.get("/sign_startup",(req,res)=>{
+    res.render("sign_startup");
+})
+
+app.get("/sign_job",(req,res)=>{
+    res.render("sign_job");
+})
 
 app.listen(port,()=>{
     console.log(`listening to port : ${port}`)

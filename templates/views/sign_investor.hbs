@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="sign_investor.css">
+  <title>Investor Sign-Up</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">Personal Information</h1>
+    <form id="investor-form" action="/sign_in">
+      <div class="form-group">
+        <label for="full-name">Full Name:</label>
+        <input type="text" id="full-name" name="full-name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="address">Address (optional):</label>
+        <input type="text" id="address" name="address">
+      </div>
+      <div class="form-group">
+        <label for="nationality">Nationality/Citizenship:</label>
+        <input type="text" id="nationality" name="nationality" required>
+      </div>
+      <h1 class="heading">Investment Preferences</h1>
+      <div class="form-group">
+        <label for="investment-amount">Investment Amount Range:</label>
+        <input type="number" id="investment-amount-min" name="investment-amount-min" min="1" placeholder="Minimum" required> -
+        <input type="number" id="investment-amount-max" name="investment-amount-max" min="1" placeholder="Maximum" required>
+      </div>
+      <div class="form-group">
+        <label for="investment-horizon">Investment Horizon:</label>
+        <input type="number" id="investment-horizon" name="investment-horizon" min="1" required> years
+      </div>
+      <div class="form-group">
+        <label for="investment-type">Investment Type:</label>
+        <div class="checkbox">
+          <label for="equity">Equity:</label>
+          <input type="checkbox" id="equity" name="investment-type[]" value="equity">
+        </div>
+        <div class="checkbox">
+          <label for="convertible-notes">Convertible Notes:</label>
+          <input type="checkbox" id="convertible-notes" name="investment-type[]" value="convertible-notes">
+        </div>
+        <div class="checkbox">
+          <label for="preferred-stock">Preferred Stock:</label>
+          <input type="checkbox" id="preferred-stock" name="investment-type[]" value="preferred-stock">
+        </div>
+      </div>
+      <h1 class="heading">Risk Tolerance</h1>
+      <div class="form-group">
+        <label for="risk-appetite">Risk Appetite:</label>
+        <select id="risk-appetite" name="risk-appetite" required>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+      <h1 class="heading">Legal and Compliance</h1>
+      <div class="form-group">
+        <label for="compliance-documents">Compliance Documents:</label>
+        <input type="file" id="compliance-documents" name="compliance-documents" multiple>
+      </div>
+      <div class="form-group">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
