@@ -44,15 +44,15 @@
         <label for="investment-type">Investment Type:</label>
         <div class="checkbox">
           <label for="equity">Equity:</label>
-          <input type="checkbox" id="equity" name="investment-type[]" value="equity">
+          <input type="radio" id="equity" name="investment-type[]" value="equity">
         </div>
         <div class="checkbox">
           <label for="convertible-notes">Convertible Notes:</label>
-          <input type="checkbox" id="convertible-notes" name="investment-type[]" value="convertible-notes">
+          <input type="radio" id="convertible-notes" name="investment-type[]" value="convertible-notes">
         </div>
         <div class="checkbox">
           <label for="preferred-stock">Preferred Stock:</label>
-          <input type="checkbox" id="preferred-stock" name="investment-type[]" value="preferred-stock">
+          <input type="radio" id="preferred-stock" name="investment-type[]" value="preferred-stock">
         </div>
       </div>
       <h1 class="heading">Risk Tolerance</h1>
@@ -63,11 +63,6 @@
           <option value="medium">Medium</option>
           <option value="high">High</option>
         </select>
-      </div>
-      <h1 class="heading">Legal and Compliance</h1>
-      <div class="form-group">
-        <label for="compliance-documents">Compliance Documents:</label>
-        <input type="file" id="compliance-documents" name="compliance-documents" multiple>
       </div>
       <div class="form-group">
         <button type="submit">Sign Up</button>
